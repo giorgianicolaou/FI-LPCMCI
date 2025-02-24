@@ -1,0 +1,170 @@
+nohup: ignoring input
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+Finished.
+   Elapsed Time (s)  F1 Score       CMI  Recall
+0        994.457309  0.363636  0.311713     0.8
+1        895.388710  0.347826  0.313774     0.0
+2        942.229353  0.538462  0.325966     0.4
+3        905.086350  0.347826  0.362095     0.0
+4        866.833991  0.285714  0.387134     0.0
+5        805.892575  0.347826  0.390497     0.0
+6        759.519424  0.380952  0.245304     0.0
+7        803.097130  0.347826  0.271922     0.0
+8       1246.685436  0.454545  0.340462     0.8
+9        924.736117  0.333333  0.256736     0.0
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:419: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:419: ConvergenceWarning: The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+Starting LPCMCI...
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:429: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified upper bound 100000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/kernels.py:419: ConvergenceWarning: The optimal value found for dimension 0 of parameter k1__length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+Finished.
+   Elapsed Time (s)  F1 Score       CMI  Recall
+0       1106.812213  0.160000  0.237765     0.0
+1       1238.472184  0.000000  0.232632     0.0
+2        918.151631  0.090909  0.265011     0.0
+3        660.727423  0.090909  0.281807     0.0
+4        683.547585  0.000000  0.228636     0.0
+5        523.312134  0.095238  0.259721     0.0
+6       1327.087492  0.160000  0.202110     0.0
+7       1131.440494  0.000000  0.201718     0.0
+8       1014.501928  0.000000  0.230153     0.0
+9       1206.329295  0.000000  0.195928     0.0
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+Starting LPCMCI...
+Finished.
+   Elapsed Time (s)  F1 Score       CMI  Recall
+0         94.655152         0  0.291472     0.0
+1        100.808934         0  0.334062     0.0
+2        124.678295         0  0.408666     0.0
+3        302.720707         0  0.242574     0.0
+4         78.231628         0  0.355476     0.0
+5         72.866141         0  0.312095     0.0
+6        104.366418         0  0.309530     0.0
+7         79.696465         0  0.433259     0.0
+8        121.020400         0  0.334345     0.0
+9        187.937017         0  0.262773     0.0

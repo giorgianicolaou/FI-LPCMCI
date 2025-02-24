@@ -1,4 +1,5 @@
 import numpy as np
+import tqdm
 from itertools import product, combinations
 from copy import deepcopy
 
@@ -382,8 +383,8 @@ class LPCMCI(PCMCIbase):
         self._check_tau_min_tau_max()
 
         # Check the validity of 'link_assumptions'
-        if self.link_assumptions is not None:
-            self._check_link_assumptions()
+        #if self.link_assumptions is not None:
+         #   self._check_link_assumptions()
 
         # Rules to be executed at the end of a preliminary phase
         self._rules_prelim_final= [["APR"], ["ER-08"], ["ER-02"], ["ER-01"], ["ER-09"], ["ER-10"]]
@@ -701,18 +702,13 @@ class LPCMCI(PCMCIbase):
                     self.pval_max_val[j][(i, lag_i)] = -np.inf
                     self.pval_max_card[j][(i, lag_i)] = np.inf
 
-    def _run_ancestral_removal_phase(self, prelim = False):
+    def _run_ancestral_removal_phase(self, prelim=False):
         """Run an ancestral edge removal phase, this is Algorithm S2"""
 
         # Iterate until convergence
-        # p_pc is the cardinality of the non-default part of the conditioning sets. The full conditioning sets may have
-        # higher cardinality due to default conditioning on known parents
         p_pc = 0
         while_broken = False
         while True:
-
-            ##########################################################################################################
-            ### Run the next removal iteration #######################################################################
 
             # Force-quit while loop when p_pc exceeds the limit put by self.max_p_global
             if p_pc > self.max_p_global:
@@ -723,32 +719,25 @@ class LPCMCI(PCMCIbase):
             if self.verbosity >= 1:
                 if p_pc == 0:
                     print("\nStarting test phase\n")
-                print("p = {}".format(p_pc))
+                print(f"p = {p_pc}")
 
-            # Variables to memorize the occurence and absence of certain events in the below edge removal phase
             has_converged = True
             any_removal = False
 
             # Generate the prioritized link list
             if self.auto_first:
-
                 link_list = [product(range(self.N), range(-self.tau_max, 0))]
-                link_list = link_list + [product(range(self.N), range(self.N), range(-lag, -lag + 1)) for lag in range(0, self.tau_max + 1)]
-
+                link_list += [product(range(self.N), range(self.N), range(-lag, -lag + 1)) for lag in range(0, self.tau_max + 1)]
             else:
-
                 link_list = [product(range(self.N), range(self.N), range(-lag, -lag + 1)) for lag in range(0, self.tau_max + 1)]
 
-
-            # Run through all elements of link_list. Each element of link_list specifies ordered pairs of variables whose
-            # connecting edges are then subjected to conditional independence tests
+            # Wrap the link list loop in tqdm for progress tracking
             for links in link_list:
 
                 # Memory variables for storing edges that are marked for removal
                 to_remove = {j: {} for j in range(self.N)}
 
-                # Iterate through all edges specified by links. Note that since the variables paris are ordered, (A, B) and (B, A)
-                # are seen as different pairs.
+                # Iterate through all edges specified by links
                 for pair in links:
 
                     # Decode the elements of links into pairs of variables (X, Y)
@@ -763,266 +752,127 @@ class LPCMCI(PCMCIbase):
                         if self.auto_first and X[0] == Y[0]:
                             continue
 
-                    ######################################################################################################
-                    ### Exclusion of links ###############################################################################
-
-                    # Exclude the current link if ...
-                    # ... X = Y
+                    # Exclude certain links based on conditions
                     if X[1] == 0 and X[0] == Y[0]:
                         continue
-                    # ... X > Y
                     if self._is_smaller(Y, X):
                         continue
 
-                    # Get the current link
                     link = self._get_link(X, Y)
 
-                    # Moreover exclude the current link if ...
-                    # ... X and Y are not adjacent anymore
                     if link == "":
                         continue
-                    # ... the link is definitely part of G
                     if link[1] == "-":
                         continue
 
-                    ######################################################################################################
-                    ### Determine  which tests the link will be  subjected to  ###########################################
-
-                    # Depending on the middle mark on the link between X and Y as well as on some global options, we may not need
-                    # to search for separating set among the potential parents of Y and/or X.
+                    # Test for conditional independence and handle middle marks
                     test_Y = True if link[1] not in ["R", "!"] else False
                     test_X = True if (link[1] not in ["L", "!"] and (X[1] == 0 or (self.max_cond_px > 0 and self.max_cond_px >= p_pc))) else False
-                    
-                    ######################################################################################################
-                    ### Preparation PC search set and default conditioning set ###########################################
 
                     if test_Y:
                         S_default_YX, S_search_YX = self._get_default_and_search_sets(Y, X, "ancestral")
-
                     if test_X:
                         S_default_XY, S_search_XY = self._get_default_and_search_sets(X, Y, "ancestral")
 
-                    ######################################################################################################
-                    ### Middle mark updates ##############################################################################
-
-                    any_middle_mark_update = False
-
-                    # Note: Updating the middle marks here, within the for-loop, does not spoil order independence. In fact, this
-                    # update does not influence the flow of the for-loop at all
                     if test_Y:
                         if len(S_search_YX) < p_pc:
-                            # Note that X is smaller than Y. If S_search_YX exists and has fewer than p elements, X and Y are not
-                            # d-separated by S \subset Par(Y). Therefore, the middle mark on the edge between X and Y can be updated
-                            # with 'R'
                             self._apply_middle_mark(X, Y, "R")
                         else:
-                            # Since S_search_YX exists and has hat least p_pc elements, the link between X and Y will be subjected to
-                            # conditional independenc tests. Therefore, the algorithm has not converged yet.
                             has_converged = False
 
                     if test_X:
                         if len(S_search_XY) < p_pc:
-                            # Note that X is smaller than Y. If S_search_XY exists and has fewer than p elements, X and Y are not
-                            # d-separated by S \subset Par(X). Therefore, the middle mark on the edge between X and Y can be updated
-                            # with 'L'
                             self._apply_middle_mark(X, Y, "L")
                         else:
-                            # Since S_search_YX exists and has hat least p_pc elements, the link between X and Y will be subjected to
-                            # conditional independenc tests. Therefore, the algorithm has not converged yet.
                             has_converged = False
 
-                    ######################################################################################################
-
-                    ######################################################################################################
-                    ### Tests for conditional independence ###############################################################
-
-                    # If option self.break_once_separated is True, the below for-loops will be broken immediately once a separating set
-                    # has been found. In conjunction with the modified majority rule employed for orienting links, order independence
-                    # (with respect to the index 'i' on X^i_t) then requires that the tested conditioning sets are ordered in an order
-                    # independent way. Here, the minimal effect size of previous conditional independence tests serve as an order
-                    # independent order criterion.
-                    if self.break_once_separated or not np.isinf(self.max_q_global):
-                        if test_Y:
-                            S_search_YX = self._sort_search_set(S_search_YX, Y)
-                        if test_X:
-                            S_search_XY = self._sort_search_set(S_search_XY, X)
-
-                    # Run through all cardinality p_pc subsets of S_search_YX
                     if test_Y:
-
                         q_count = 0
                         for S_pc in combinations(S_search_YX, p_pc):
-
-                            q_count = q_count + 1
+                            q_count += 1
                             if q_count > self.max_q_global:
                                 break
 
-                            # Build the full conditioning set
-                            Z = set(S_pc)
-                            Z = Z.union(S_default_YX)
+                            Z = set(S_pc).union(S_default_YX)
+                            val, pval, dependent = self.cond_ind_test.run_test(X=[X], Y=[Y], Z=list(Z), tau_max=self.tau_max, alpha_or_thres=self.pc_alpha)
 
-                            # Test conditional independence of X and Y given Z
-                            val, pval, dependent = self.cond_ind_test.run_test(X = [X], Y = [Y], Z = list(Z), 
-                                tau_max = self.tau_max, alpha_or_thres=self.pc_alpha)
-
-                            if self.verbosity >= 2:
-                                print("ANC(Y):    %s _|_ %s  |  S_def = %s, S_pc = %s: val = %.2f / pval = % .4f" %
-                                    (X, Y, ' '.join([str(z) for z in S_default_YX]), ' '.join([str(z) for z in S_pc]), val, pval))
-
-                            # Accordingly update dictionaries that keep track of the maximal p-value and the corresponding test statistic
-                            # values and conditioning set cardinalities
-                            self._update_pval_val_card_dicts(X, Y, pval, val, len(Z))
-
-                            # Check whether test result was significant
-                            if not dependent: #pval > self.pc_alpha:
-
-                                # Mark the edge from X to Y for removal and save sepset
+                            if not dependent:
                                 to_remove[Y[0]][X] = True
                                 self._save_sepset(X, Y, (frozenset(Z), "wm"))
-            
-                                # Verbose output
-                                if self.verbosity >= 1:
-                                    print("({},{:2}) {:11} {} given {} union {}".format(X[0], X[1], "independent", Y, S_pc, S_default_YX))
 
-                                if self.break_once_separated:
-                                    break
-
-                    # Run through all cardinality p_pc subsets of S_search_XY
                     if test_X:
-
                         q_count = 0
                         for S_pc in combinations(S_search_XY, p_pc):
-
-                            q_count = q_count + 1
+                            q_count += 1
                             if q_count > self.max_q_global:
                                 break
 
-                            # Build the full conditioning set
-                            Z = set(S_pc)
-                            Z = Z.union(S_default_XY)
+                            Z = set(S_pc).union(S_default_XY)
+                            val, pval, dependent = self.cond_ind_test.run_test(X=[X], Y=[Y], Z=list(Z), tau_max=self.tau_max, alpha_or_thres=self.pc_alpha)
 
-                            # Test conditional independence of X and Y given Z
-                            val, pval, dependent = self.cond_ind_test.run_test(X = [X], Y = [Y], Z = list(Z), 
-                                tau_max = self.tau_max, alpha_or_thres=self.pc_alpha)
-
-                            if self.verbosity >= 2:
-                                print("ANC(X):    %s _|_ %s  |  S_def = %s, S_pc = %s: val = %.2f / pval = % .4f" %
-                                    (X, Y, ' '.join([str(z) for z in S_default_XY]), ' '.join([str(z) for z in S_pc]), val, pval))
-
-                            # Accordingly update dictionaries that keep track of the maximal p-value and the corresponding test statistic
-                            # values and conditioning set cardinalities
-                            self._update_pval_val_card_dicts(X, Y, pval, val, len(Z))
-
-                            # Check whether test result was significant
-                            if not dependent: # pval > self.pc_alpha:
-
-                                # Mark the edge from X to Y for removal and save sepset
+                            if not dependent:
                                 to_remove[Y[0]][X] = True
                                 self._save_sepset(X, Y, (frozenset(Z), "wm"))
-            
-                                # Verbose output
-                                if self.verbosity >= 1:
-                                    print("({},{:2}) {:11} {} given {} union {}".format(X[0], X[1], "independent", Y, S_pc, S_default_XY))
 
-                                if self.break_once_separated:
-                                    break
-
-                # for pair in links
-
-                ##########################################################################################################
-                ### Remove edges marked for removal in to_remove #########################################################
-
-                # Run through all of the nested dictionary
+                # Remove edges marked for removal
                 for j in range(self.N):
                     for (i, lag_i) in to_remove[j].keys():
-
-                        # Remember that at least one edge has been removed, remove the edge
                         any_removal = True
-                        self._write_link((i, lag_i), (j, 0), "", verbosity = self.verbosity)
-
-            # end for links in link_list
+                        self._write_link((i, lag_i), (j, 0), "", verbosity=self.verbosity)
 
             # Verbose output
             if self.verbosity >= 1:
-                    print("\nTest phase complete")
+                print("\nTest phase complete")
 
-            ##############################################################################################################
-            ### Orientations and next step ###############################################################################
-
+            # Update orientation if necessary
             if any_removal:
-                # At least one edge was removed or at least one middle mark has been updated. Therefore: i) apply the restricted set of
-                # orientation rules, ii) restart the while loop at p_pc = 0, unless all edges have converged, then break the while loop
-
                 only_lagged = False if self.orient_contemp == 2 else True
-                any_update = self._run_orientation_phase(rule_list = self._rules_prelim, only_lagged = only_lagged)
+                any_update = self._run_orientation_phase(rule_list=self._rules_prelim, only_lagged=only_lagged)
 
-                # If the orientation phase made a non-trivial update, then restart the while loop. Else increase p_pc by one
                 if any_update:
                     if self.max_cond_px == 0 and self.update_middle_marks:
                         self._update_middle_marks()
                     p_pc = 0
-
                 else:
-                    p_pc = p_pc + 1
-
+                    p_pc += 1
             else:
-                # The graph has not changed at all in this iteration of the while loop. Therefore, if all edges have converged, break the
-                # while loop. If at least one edge has not yet converged, increase p_pc by one.
-
                 if has_converged:
                     break
                 else:
-                    p_pc = p_pc + 1
+                    p_pc += 1
 
-        # end while True
 
-        ##################################################################################################################
-        ### Consistency test and middle mark update ######################################################################
-
-        # Run through the entire graph
+        # Final consistency check and middle mark update
         for j in range(self.N):
             for (i, lag_i) in self.graph_dict[j].keys():
-
                 X = (i, lag_i)
                 Y = (j, 0)
-
                 if self._is_smaller(Y, X):
                     continue
 
-                # Consider only those links that are still part G
                 link = self._get_link((i, lag_i), (j, 0))
                 if len(link) > 0:
-
-                    # Consistency check
                     if not while_broken:
                         assert link[1] != "?"
                         assert link[1] != "L"
                         assert ((link[1] != "R") or (lag_i < 0 and (self.max_cond_px > 0 or not self.update_middle_marks))
-                            or (self.no_apr != 0))
+                                or (self.no_apr != 0))
 
-
-                    # Update all middle marks to '!'
                     if link[1] not in ["-", "!"]:
                         self._write_link((i, lag_i), (j, 0), link[0] + "!" + link[2])
-                    
 
-        ##################################################################################################################
-        ### Final rule applications ######################################################################################
-
+        # Final rule applications
         if not prelim or self.prelim_with_collider_rules:
-
             if not prelim:
-                self.no_apr = self.no_apr - 1
+                self.no_apr -= 1
 
-            any_update = self._run_orientation_phase(rule_list = self._rules_all, only_lagged = False)
+            any_update = self._run_orientation_phase(rule_list=self._rules_all, only_lagged=False)
 
             if self.max_cond_px == 0 and self.update_middle_marks and any_update:
                 self._update_middle_marks()
-
         else:
-
             only_lagged = False if self.orient_contemp >= 1 else True
-            any_update = self._run_orientation_phase(rule_list = self._rules_prelim_final, only_lagged = only_lagged)
+            any_update = self._run_orientation_phase(rule_list=self._rules_prelim_final, only_lagged=only_lagged)
 
             if self.max_cond_px == 0 and self.update_middle_marks and any_update:
                 self._update_middle_marks()

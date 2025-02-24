@@ -1,0 +1,54 @@
+nohup: ignoring input
+Evaluating 0 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 0 lags: 100%|██████████| 2/2 [01:35<00:00, 47.78s/it]Evaluating 0 lags: 100%|██████████| 2/2 [01:35<00:00, 47.78s/it]
+Evaluating 1 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 1 lags:  50%|█████     | 1/2 [01:30<01:30, 90.94s/it]Evaluating 1 lags: 100%|██████████| 2/2 [02:51<00:00, 84.96s/it]Evaluating 1 lags: 100%|██████████| 2/2 [02:51<00:00, 85.85s/it]
+Evaluating 2 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 2 lags:  50%|█████     | 1/2 [01:36<01:36, 96.59s/it]Evaluating 2 lags: 100%|██████████| 2/2 [03:19<00:00, 100.42s/it]Evaluating 2 lags: 100%|██████████| 2/2 [03:19<00:00, 99.84s/it] 
+Evaluating 3 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 3 lags:  50%|█████     | 1/2 [02:45<02:45, 165.38s/it]Evaluating 3 lags: 100%|██████████| 2/2 [05:39<00:00, 170.32s/it]Evaluating 3 lags: 100%|██████████| 2/2 [05:39<00:00, 169.58s/it]
+Evaluating 4 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 4 lags:  50%|█████     | 1/2 [02:13<02:13, 133.87s/it]Evaluating 4 lags: 100%|██████████| 2/2 [04:30<00:00, 135.44s/it]Evaluating 4 lags: 100%|██████████| 2/2 [04:30<00:00, 135.21s/it]
+Evaluating 5 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 5 lags:  50%|█████     | 1/2 [03:10<03:10, 190.25s/it]Evaluating 5 lags: 100%|██████████| 2/2 [06:34<00:00, 198.77s/it]Evaluating 5 lags: 100%|██████████| 2/2 [06:34<00:00, 197.49s/it]
+Evaluating 6 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 6 lags:  50%|█████     | 1/2 [03:31<03:31, 211.06s/it]Evaluating 6 lags: 100%|██████████| 2/2 [07:02<00:00, 211.44s/it]Evaluating 6 lags: 100%|██████████| 2/2 [07:02<00:00, 211.38s/it]
+Evaluating 7 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 7 lags:  50%|█████     | 1/2 [03:04<03:04, 184.94s/it]Evaluating 7 lags: 100%|██████████| 2/2 [06:07<00:00, 183.73s/it]Evaluating 7 lags: 100%|██████████| 2/2 [06:07<00:00, 183.91s/it]
+Target: 0
+Definite Drivers: ['0_lag1', '1', '2', '3', '4']
+Discovered Drivers: []
+Definite Non-Drivers: ['5', '6', '7']
+Final Baseline MSE: 6033.292789612417
+Evaluating 0 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 0 lags:  50%|█████     | 1/2 [01:19<01:19, 79.76s/it]Evaluating 0 lags: 100%|██████████| 2/2 [02:49<00:00, 85.56s/it]Evaluating 0 lags: 100%|██████████| 2/2 [02:49<00:00, 84.69s/it]
+Evaluating 1 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 1 lags: 100%|██████████| 2/2 [01:26<00:00, 43.23s/it]Evaluating 1 lags: 100%|██████████| 2/2 [01:26<00:00, 43.23s/it]
+Evaluating 2 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 2 lags:  50%|█████     | 1/2 [01:30<01:30, 90.60s/it]Evaluating 2 lags: 100%|██████████| 2/2 [02:55<00:00, 87.28s/it]Evaluating 2 lags: 100%|██████████| 2/2 [02:55<00:00, 87.77s/it]
+Evaluating 3 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 3 lags:  50%|█████     | 1/2 [01:20<01:20, 80.74s/it]Evaluating 3 lags: 100%|██████████| 2/2 [02:43<00:00, 81.73s/it]Evaluating 3 lags: 100%|██████████| 2/2 [02:43<00:00, 81.59s/it]
+Evaluating 4 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 4 lags:  50%|█████     | 1/2 [01:22<01:22, 82.80s/it]Evaluating 4 lags: 100%|██████████| 2/2 [02:41<00:00, 80.40s/it]Evaluating 4 lags: 100%|██████████| 2/2 [02:41<00:00, 80.76s/it]
+Evaluating 5 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 5 lags:  50%|█████     | 1/2 [01:22<01:22, 82.28s/it]Evaluating 5 lags: 100%|██████████| 2/2 [02:44<00:00, 82.16s/it]Evaluating 5 lags: 100%|██████████| 2/2 [02:44<00:00, 82.18s/it]
+Evaluating 6 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 6 lags:  50%|█████     | 1/2 [01:11<01:11, 71.93s/it]Evaluating 6 lags: 100%|██████████| 2/2 [02:33<00:00, 77.58s/it]Evaluating 6 lags: 100%|██████████| 2/2 [02:33<00:00, 76.73s/it]
+Evaluating 7 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 7 lags:  50%|█████     | 1/2 [01:15<01:15, 75.27s/it]Evaluating 7 lags: 100%|██████████| 2/2 [02:32<00:00, 76.69s/it]Evaluating 7 lags: 100%|██████████| 2/2 [02:32<00:00, 76.48s/it]
+Target: 1
+Definite Drivers: ['0']
+Discovered Drivers: []
+Definite Non-Drivers: ['1', '2', '3', '4', '5', '6', '7']
+Final Baseline MSE: 0.005865190687299783
+Evaluating 0 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 0 lags:  50%|█████     | 1/2 [01:37<01:37, 97.46s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:20<00:00, 100.94s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:20<00:00, 100.42s/it]
+Evaluating 1 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 1 lags:  50%|█████     | 1/2 [01:44<01:44, 104.69s/it]Evaluating 1 lags: 100%|██████████| 2/2 [03:39<00:00, 110.62s/it]Evaluating 1 lags: 100%|██████████| 2/2 [03:39<00:00, 109.73s/it]
+Evaluating 2 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 2 lags: 100%|██████████| 2/2 [01:33<00:00, 46.88s/it]Evaluating 2 lags: 100%|██████████| 2/2 [01:33<00:00, 46.88s/it]
+Evaluating 3 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 3 lags:  50%|█████     | 1/2 [01:35<01:35, 95.68s/it]Evaluating 3 lags: 100%|██████████| 2/2 [03:11<00:00, 95.94s/it]Evaluating 3 lags: 100%|██████████| 2/2 [03:11<00:00, 95.90s/it]
+Evaluating 4 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 4 lags:  50%|█████     | 1/2 [01:18<01:18, 78.63s/it]Evaluating 4 lags: 100%|██████████| 2/2 [02:40<00:00, 80.29s/it]Evaluating 4 lags: 100%|██████████| 2/2 [02:40<00:00, 80.04s/it]
+Evaluating 5 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 5 lags:  50%|█████     | 1/2 [01:20<01:20, 80.32s/it]Evaluating 5 lags: 100%|██████████| 2/2 [02:43<00:00, 82.26s/it]Evaluating 5 lags: 100%|██████████| 2/2 [02:44<00:00, 82.35s/it]
+Evaluating 6 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 6 lags:  50%|█████     | 1/2 [01:31<01:31, 91.86s/it]Evaluating 6 lags: 100%|██████████| 2/2 [03:08<00:00, 94.61s/it]Evaluating 6 lags: 100%|██████████| 2/2 [03:08<00:00, 94.20s/it]
+Evaluating 7 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 7 lags:  50%|█████     | 1/2 [01:30<01:30, 90.95s/it]Evaluating 7 lags: 100%|██████████| 2/2 [03:03<00:00, 92.05s/it]Evaluating 7 lags: 100%|██████████| 2/2 [03:03<00:00, 91.88s/it]
+Target: 2
+Definite Drivers: ['3', '5']
+Discovered Drivers: []
+Definite Non-Drivers: ['0', '1', '2', '4', '6', '7']
+Final Baseline MSE: 2.0239011768552824
+Evaluating 0 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 0 lags:  50%|█████     | 1/2 [01:25<01:25, 85.57s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:13<00:00, 98.95s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:13<00:00, 96.95s/it]
+Evaluating 1 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 1 lags:  50%|█████     | 1/2 [01:08<01:08, 68.67s/it]Evaluating 1 lags: 100%|██████████| 2/2 [02:18<00:00, 69.63s/it]Evaluating 1 lags: 100%|██████████| 2/2 [02:18<00:00, 69.49s/it]
+Evaluating 2 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 2 lags:  50%|█████     | 1/2 [01:23<01:23, 83.43s/it]Evaluating 2 lags: 100%|██████████| 2/2 [02:57<00:00, 89.50s/it]Evaluating 2 lags: 100%|██████████| 2/2 [02:57<00:00, 88.59s/it]
+Evaluating 3 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 3 lags: 100%|██████████| 2/2 [02:55<00:00, 87.80s/it]Evaluating 3 lags: 100%|██████████| 2/2 [02:55<00:00, 87.80s/it]
+Evaluating 4 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 4 lags:  50%|█████     | 1/2 [03:40<03:40, 220.53s/it]Evaluating 4 lags: 100%|██████████| 2/2 [06:38<00:00, 195.46s/it]Evaluating 4 lags: 100%|██████████| 2/2 [06:38<00:00, 199.22s/it]
+Evaluating 5 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 5 lags:  50%|█████     | 1/2 [03:41<03:41, 221.09s/it]Evaluating 5 lags: 100%|██████████| 2/2 [07:10<00:00, 214.12s/it]Evaluating 5 lags: 100%|██████████| 2/2 [07:10<00:00, 215.16s/it]
+Evaluating 6 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 6 lags:  50%|█████     | 1/2 [03:29<03:29, 209.53s/it]Evaluating 6 lags: 100%|██████████| 2/2 [06:46<00:00, 202.14s/it]Evaluating 6 lags: 100%|██████████| 2/2 [06:46<00:00, 203.25s/it]
+Evaluating 7 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 7 lags:  50%|█████     | 1/2 [03:02<03:01, 182.00s/it]Evaluating 7 lags: 100%|██████████| 2/2 [05:58<00:00, 178.80s/it]Evaluating 7 lags: 100%|██████████| 2/2 [05:58<00:00, 179.28s/it]
+Target: 3
+Definite Drivers: ['0', '1', '2', '4', '5']
+Discovered Drivers: []
+Definite Non-Drivers: ['3', '6', '7']
+Final Baseline MSE: 1.1939193486688087
+Evaluating 0 lags:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating 0 lags:  50%|█████     | 1/2 [01:25<01:25, 85.44s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:04<00:00, 93.65s/it]Evaluating 0 lags: 100%|██████████| 2/2 [03:04<00:00, 92.42s/it]

@@ -1,0 +1,43 @@
+{0: {(0, -1): '-?>', (1, 0): '<?-', (1, -1): '-?>', (2, 0): '-?>', (2, -1): '', (3, 0): '-?>', (3, -1): '', (4, 0): '-?>', (4, -1): '', (5, 0): '-?>', (5, -1): '', (6, 0): '-?>', (6, -1): '', (7, 0): '', (7, -1): ''}, 1: {(0, 0): '-?>', (0, -1): 'o?>', (1, -1): '', (2, 0): '', (2, -1): '', (3, 0): '', (3, -1): '', (4, 0): '', (4, -1): '', (5, 0): '', (5, -1): '', (6, 0): '', (6, -1): '', (7, 0): '-?>', (7, -1): 'o?>'}, 2: {(0, 0): '<?-', (0, -1): '', (1, 0): '', (1, -1): '', (2, -1): '-?>', (3, 0): 'o?o', (3, -1): 'o?>', (4, 0): 'o?o', (4, -1): 'o?>', (5, 0): 'o?o', (5, -1): 'o?>', (6, 0): 'o?o', (6, -1): 'o?>', (7, 0): '<?-', (7, -1): ''}, 3: {(0, 0): '<?-', (0, -1): '', (1, 0): '', (1, -1): '', (2, 0): 'o?o', (2, -1): 'o?>', (3, -1): '-?>', (4, 0): 'o?o', (4, -1): 'o?>', (5, 0): 'o?o', (5, -1): 'o?>', (6, 0): 'o?o', (6, -1): 'o?>', (7, 0): '<?-', (7, -1): ''}, 4: {(0, 0): '<?-', (0, -1): '', (1, 0): '', (1, -1): '', (2, 0): 'o?o', (2, -1): 'o?>', (3, 0): 'o?o', (3, -1): 'o?>', (4, -1): '-?>', (5, 0): 'o?o', (5, -1): 'o?>', (6, 0): 'o?o', (6, -1): 'o?>', (7, 0): '<?-', (7, -1): ''}, 5: {(0, 0): '<?-', (0, -1): '', (1, 0): '', (1, -1): '', (2, 0): 'o?o', (2, -1): 'o?>', (3, 0): 'o?o', (3, -1): 'o?>', (4, 0): 'o?o', (4, -1): 'o?>', (5, -1): '-?>', (6, 0): 'o?o', (6, -1): 'o?>', (7, 0): '<?-', (7, -1): ''}, 6: {(0, 0): '<?-', (0, -1): '', (1, 0): '', (1, -1): '', (2, 0): 'o?o', (2, -1): 'o?>', (3, 0): 'o?o', (3, -1): 'o?>', (4, 0): 'o?o', (4, -1): 'o?>', (5, 0): 'o?o', (5, -1): 'o?>', (6, -1): '-?>', (7, 0): '<?-', (7, -1): ''}, 7: {(0, 0): '', (0, -1): 'o?>', (1, 0): '<?-', (1, -1): '-?>', (2, 0): '-?>', (2, -1): '', (3, 0): '-?>', (3, -1): '', (4, 0): '-?>', (4, -1): '', (5, 0): '-?>', (5, -1): '', (6, 0): '-?>', (6, -1): '', (7, -1): 'o?>'}}
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
+/data/gnicolaou/tigramite/.venv/lib/python3.10/site-packages/sklearn/gaussian_process/_gpr.py:663: ConvergenceWarning: lbfgs failed to converge (status=2):
+ABNORMAL_TERMINATION_IN_LNSRCH.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  _check_optimize_result("lbfgs", opt_res)
