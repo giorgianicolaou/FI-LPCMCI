@@ -253,7 +253,7 @@ def feature_selection_lpcmci(data, gt = [], lag=1, test_size=0.2, random_state=4
         return results, elapsed_time
 
 # Load Data, Handle Missingness:
-data = torch.load(f"/home/gnicolaou/tigramite/tutorials/causal_discovery/combined_tensor.pt", map_location=torch.device('cpu'))
+data = torch.load(f"./FI-LPCMCI/Fi-LPCMCI-simulations/combined_tensor.pt", map_location=torch.device('cpu'))
 
 # Convert to DataFrame
 dat = pd.DataFrame(data.numpy())
